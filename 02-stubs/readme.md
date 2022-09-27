@@ -1,0 +1,2 @@
+# Stubs = Usados para substituir funcionalidades do sistemas por objetos estáticos
+- Ex: Imaginando que estamos consumindo uma API de CEP e uma sexta feira caiu, todos testes vão cair, então os stubs substitui essas funcionalidades, com dados mockados, fazendo sempre os testes passar independentes de terceiros.
