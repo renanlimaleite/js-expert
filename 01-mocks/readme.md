@@ -13,4 +13,3 @@
   - senha diferentes
   - senha maior que 6 menor que 10
   - senha vazia
-  - user repetido
