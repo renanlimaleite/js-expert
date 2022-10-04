@@ -12,17 +12,18 @@ const mocks = {
 
 (async () => {
   // {
-  //     // vai pra net
-  //     const service = new Service()
-  //     const withoutStub = await service.makeRequest(BASE_URL_2)
-  //     console.log(JSON.stringify(withoutStub))
+  //   // dessa forma vai pra internet,
+  //   const service = Service();
+  //   const withoutStub = await service.makeRequest(BASE_URL_1);
+  //   console.log(JSON.stringify(withoutStub));
   // }
 
-  const service = new Service();
+  const service = Service();
+
+  // sinon substitui a função passada, e mesmo desligando wi-fi os testes continuam!
   const stub = sinon.stub(service, service.makeRequest.name);
 
   stub.withArgs(BASE_URL_1).resolves(mocks.tatooine);
-
   stub.withArgs(BASE_URL_2).resolves(mocks.alderaan);
 
   {
@@ -34,6 +35,7 @@ const mocks = {
     const results = await service.getPlanets(BASE_URL_1);
     deepStrictEqual(results, expected);
   }
+
   {
     const expected = {
       name: "Alderaan",
