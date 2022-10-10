@@ -9,4 +9,4 @@ Outro exemplo: Converter um CSV em JSON
 
 - A melhor forma de testar isso é mockando um conteúdo, um inválido, um válido... etc
 
-# spies -> observam as funções validando as quantidades de vezes que elas foram chamadas, quais parâmetros e quais resultados.
+# spies -> observam as funções validando as quantidades de vezes que elas foram chamadas, quais parâmetros e quais resultados..
